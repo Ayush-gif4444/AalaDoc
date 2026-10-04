@@ -1,0 +1,1 @@
+export { initializeFirebaseAuth } from './firebase-auth-persistence.web';

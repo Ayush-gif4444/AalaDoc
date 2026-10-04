@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "5198548177",
+    "project_id": "aaladoc",
+    "storage_bucket": "aaladoc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5198548177:android:1f30e70a70f38b914389f0",
+        "android_client_info": {
+          "package_name": "com.aaladoc.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBt6LJIdzyv7IocGVJVrC-2fBIJKeQCDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

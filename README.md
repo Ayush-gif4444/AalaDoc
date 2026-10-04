@@ -23,6 +23,21 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
+## Firebase Authentication
+
+In the Firebase console for the `aaladoc` project, open **Authentication > Sign-in method** and enable **Email/Password**. Email registration, sign-in, password reset, and sign-out are handled by Firebase Authentication.
+
+The Android configuration is read from `google-services.json`. For web builds, register a Web app in Firebase project settings and set its API key and App ID in an ignored `.env.local` file:
+
+```dotenv
+EXPO_PUBLIC_FIREBASE_API_KEY=your-web-api-key
+EXPO_PUBLIC_FIREBASE_APP_ID=your-web-app-id
+```
+
+Restart Expo after changing environment variables. The project ID, auth domain, storage bucket, and sender ID are taken from the Android Firebase configuration.
+
+To save patient-specific age, blood group, and weight, create a Cloud Firestore database in the Firebase console. Publish the rules in `firestore.rules` from **Firestore Database > Rules**. The app stores each profile at `users/{Firebase Auth UID}`, and the rules allow each signed-in user to access only their own document. Until Firestore is enabled, these fields show as **Not set** and cannot be saved.
+
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
 ## Get a fresh project
